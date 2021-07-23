@@ -22,6 +22,6 @@ public class EmployeePayrollService
 
 	public void writeEmployeeDataInConsole() 
 	{
-		System.out.println("Displaying Employee Pay Roll Data \n"+employePayrollList);
+		System.out.println("Writing Employee Pay Roll Data \n"+employePayrollList);
 	}
 }
