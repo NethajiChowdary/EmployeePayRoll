@@ -1,10 +1,12 @@
 package employeepayroll;
 
-public class EmployeePayRollMain {
-
-	public static void main(String[] args)
+public class EmployeePayRollMain 
+{
+	public static void main(String[] args) 
 	{
-		System.out.println("Welcome to Employee Pay Roll Service");
+		EmployeePayrollService employeePayrollService = new EmployeePayrollService();
+		System.out.println("Welcolme to Employee Pay Roll");
+		employeePayrollService.readEmployeeDataFromConsole();
+		employeePayrollService.writeEmployeeDataInConsole();
 	}
-
 }
