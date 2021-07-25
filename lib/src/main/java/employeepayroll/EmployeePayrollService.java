@@ -12,7 +12,7 @@ public class EmployeePayrollService
 {
 	private List<EmployeeData> employePayrollList = new ArrayList<EmployeeData>();
 	Scanner scanner = new Scanner(System.in);
-	private static final String FILE_PATH = "c://Users//malij//OneDrive//Desktop//payroll-file.txt";
+	private static final String FILE_PATH = "C:\\Users\\Admin\\Desktop//payroll.txt";
 
 	public void readEmployeeDataFromConsole() 
 	{
@@ -46,21 +46,17 @@ public class EmployeePayrollService
 		try {
 			Files.write(Paths.get(FILE_PATH), empBuffer.toString().getBytes());
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
-	//method to create file if file doesn't exist
 	private void checkFile() 
 	{
 		File file = new File(FILE_PATH);
 		try 
 		{
-			//checking file already exists
 			if (!file.exists()) 
 			{
-				//if not creating a new file
 				file.createNewFile();
 				System.out.println("Created a file at "+FILE_PATH);
 			} 		
@@ -83,5 +79,17 @@ public class EmployeePayrollService
 			e.printStackTrace();
 		}
 		return entries;
+	}
+	
+	public void printData() 
+	{
+		try 
+		{
+			Files.lines(Paths.get(FILE_PATH)).forEach(System.out::println);
+		}
+		catch (IOException e) 
+		{
+			e.printStackTrace();
+		}
 	}
 }
