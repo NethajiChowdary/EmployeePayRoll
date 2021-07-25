@@ -15,7 +15,7 @@ public class EmployeePayrollTest
 		employeePayrollService.addEmployee(new EmployeeData(3,"Mark Z",30000));
 		employeePayrollService.writeEmployeeDataToFile();
 		long entries = employeePayrollService.countEntries();
-		assertEquals(0, entries);
+		assertEquals(3, entries);
 	}
 	
 	@Test
@@ -41,6 +41,13 @@ public class EmployeePayrollTest
 		employeePayrollService.writeEmployeeDataToFile();
 		long entries = employeePayrollService.countEntries();
 		System.out.println("Number of entries are "+entries);
+		assertEquals(3, entries);
+	}
+	@Test
+	public void givenFileOnReadindFromFileShouldMatchEmployeeCount() 
+	{
+		EmployeePayrollService employeePayrollService = new EmployeePayrollService();
+		long entries = employeePayrollService.readDataFromFile();
 		assertEquals(3, entries);
 	}
 }
