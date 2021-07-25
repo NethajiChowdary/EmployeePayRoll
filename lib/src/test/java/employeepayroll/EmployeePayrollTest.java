@@ -15,7 +15,7 @@ public class EmployeePayrollTest
 		employeePayrollService.addEmployee(new EmployeeData(3,"Mark Z",30000));
 		employeePayrollService.writeEmployeeDataToFile();
 		long entries = employeePayrollService.countEntries();
-		assertEquals(0, entries);
+		assertEquals(3, entries);
 	}
 	
 	@Test
