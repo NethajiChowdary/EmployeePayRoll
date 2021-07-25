@@ -12,7 +12,7 @@ public class EmployeePayrollService
 {
 	private List<EmployeeData> employePayrollList = new ArrayList<EmployeeData>();
 	Scanner scanner = new Scanner(System.in);
-	private static final String FILE_PATH = "c://Users//malij//OneDrive//Desktop//payroll-file.txt";
+	private static final String FILE_PATH = "C:\\Users\\Admin\\Desktop//payroll.txt";
 
 	public void readEmployeeDataFromConsole() 
 	{
